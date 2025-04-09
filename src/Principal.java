@@ -4,10 +4,11 @@ public class Principal {
         System.out.println("---------------------------------------");
 
         Pelicula pelicula1 = new Pelicula();
-        pelicula1.nombre="Mad Max";
-        pelicula1.frchaEstreno=2015;
-        pelicula1.duracionEnMinutos=120;
-        pelicula1.includoEnElPlan = true;
+
+        pelicula1.setNombre("MAD-MAX");
+        pelicula1.setFechaEstreno(2025);
+        pelicula1.setDuracionEnMinutos(120);
+        pelicula1.setIncluidoEnElPlan(true);
 
         pelicula1.muestraFichaTecnica();
 
@@ -20,10 +21,11 @@ public class Principal {
         System.out.println("---------------------------------------");
 
         Pelicula pelicula2 = new Pelicula();
-        pelicula2.nombre="Deadpool";
-        pelicula2.frchaEstreno=2016;
-        pelicula2.duracionEnMinutos=120;
-        pelicula2.includoEnElPlan = false;
+
+        pelicula2.setNombre("DEADPOOL");
+        pelicula2.setFechaEstreno(1956);
+        pelicula2.setDuracionEnMinutos(60);
+        pelicula2.setIncluidoEnElPlan(false);
 
         pelicula2.muestraFichaTecnica();
 
@@ -40,10 +42,10 @@ public class Principal {
         System.out.println("---------------------------------------");
 
         Pelicula pelicula3 = new Pelicula();
-        pelicula3.nombre="Avengers";
-        pelicula3.frchaEstreno=2018;
-        pelicula3.duracionEnMinutos=120;
-        pelicula3.includoEnElPlan = true;
+        pelicula3.setNombre("AVENGERS");
+        pelicula3.setFechaEstreno(2022);
+        pelicula3.setDuracionEnMinutos(120);
+        pelicula3.setIncluidoEnElPlan(true);
 
        pelicula3.muestraFichaTecnica();
 
