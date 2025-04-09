@@ -1,34 +1,60 @@
 public class Principal {
     public static void main(String[] args) {
+
+        System.out.println("---------------------------------------");
+
         Pelicula pelicula1 = new Pelicula();
         pelicula1.nombre="Mad Max";
         pelicula1.frchaEstreno=2015;
         pelicula1.duracionEnMinutos=120;
         pelicula1.includoEnElPlan = true;
 
-        System.out.println("Nombre: " + pelicula1.nombre);
-        System.out.println("Fecha de Estreno: " + pelicula1.frchaEstreno);
-        System.out.println("Duracion en minutos: " + pelicula1.duracionEnMinutos);
-        System.out.println("Incluido en el plan: " + pelicula1.includoEnElPlan);
+        pelicula1.muestraFichaTecnica();
+
+        pelicula1.evaluaPelicula (8.5);
+        pelicula1.evaluaPelicula(9.0);
+        pelicula1.evaluaPelicula (8.5);
+        System.out.println("Total de evaluaciones: " + pelicula1.getTotalEvaluaciones());
+        System.out.println("Promedio de evaluaciones: " + pelicula1.promedioEvaluaciones());
+
+        System.out.println("---------------------------------------");
 
         Pelicula pelicula2 = new Pelicula();
         pelicula2.nombre="Deadpool";
         pelicula2.frchaEstreno=2016;
         pelicula2.duracionEnMinutos=120;
         pelicula2.includoEnElPlan = false;
-        System.out.println("Nombre: " + pelicula2.nombre);
-        System.out.println("Fecha de Estreno: " + pelicula2.frchaEstreno);
-        System.out.println("Duracion en minutos: " + pelicula2.duracionEnMinutos);
-        System.out.println("Incluido en el plan: " + pelicula2.includoEnElPlan);
+
+        pelicula2.muestraFichaTecnica();
+
+        pelicula2.evaluaPelicula (10);
+        pelicula2.evaluaPelicula(10);
+        pelicula2.evaluaPelicula (10);
+        pelicula2.evaluaPelicula(10);
+        pelicula2.evaluaPelicula (10);
+        pelicula2.evaluaPelicula(10);
+
+        System.out.println("Total de evaluaciones: " + pelicula2.getTotalEvaluaciones());
+        System.out.println("Promedio de evaluaciones: " + pelicula2.promedioEvaluaciones());
+
+        System.out.println("---------------------------------------");
 
         Pelicula pelicula3 = new Pelicula();
         pelicula3.nombre="Avengers";
         pelicula3.frchaEstreno=2018;
         pelicula3.duracionEnMinutos=120;
         pelicula3.includoEnElPlan = true;
-        System.out.println("Nombre: " + pelicula3.nombre);
-        System.out.println("Fecha de Estreno: " + pelicula3.frchaEstreno);
-        System.out.println("Duracion en minutos: " + pelicula3.duracionEnMinutos);
-        System.out.println("Incluido en el plan: " + pelicula3.includoEnElPlan);
+
+       pelicula3.muestraFichaTecnica();
+
+        pelicula3.evaluaPelicula (7.5);
+        pelicula3.evaluaPelicula(5.0);
+        pelicula3.evaluaPelicula(8.0);
+        pelicula3.evaluaPelicula(9.0);
+        System.out.println("Total de evaluaciones: " + pelicula3.getTotalEvaluaciones());
+        System.out.println("Promedio de evaluaciones: " + pelicula3.promedioEvaluaciones());
+
+        System.out.println("---------------------------------------");
+
     }
 }
