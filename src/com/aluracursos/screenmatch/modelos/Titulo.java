@@ -1,4 +1,6 @@
-public class Pelicula {
+package com.aluracursos.screenmatch.modelos;
+
+public class Titulo {
 
     private String nombre;
     private int fechaEstreno;
@@ -49,4 +51,5 @@ public class Pelicula {
         }
         return evaluacion / totalEvaluaciones;
     }
+
 }

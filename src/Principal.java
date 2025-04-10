@@ -1,62 +1,50 @@
+import com.aluracursos.screenmatch.modelos.Pelicula;
+import com.aluracursos.screenmatch.modelos.Serie;
+
 public class Principal {
     public static void main(String[] args) {
 
+
+        Pelicula madMax = new Pelicula();
         System.out.println("---------------------------------------");
 
-        Pelicula pelicula1 = new Pelicula();
+        madMax.setNombre("MAD-MAX");
+        madMax.setFechaEstreno(2025);
+        madMax.setDuracionEnMinutos(120);
+        madMax.setIncluidoEnElPlan(true);
 
-        pelicula1.setNombre("MAD-MAX");
-        pelicula1.setFechaEstreno(2025);
-        pelicula1.setDuracionEnMinutos(120);
-        pelicula1.setIncluidoEnElPlan(true);
+        madMax.muestraFichaTecnica();
 
-        pelicula1.muestraFichaTecnica();
-
-        pelicula1.evaluaPelicula (8.5);
-        pelicula1.evaluaPelicula(9.0);
-        pelicula1.evaluaPelicula (8.5);
-        System.out.println("Total de evaluaciones: " + pelicula1.getTotalEvaluaciones());
-        System.out.println("Promedio de evaluaciones: " + pelicula1.promedioEvaluaciones());
-
+        madMax.evaluaPelicula (8.5);
+        madMax.evaluaPelicula(9.0);
+        madMax.evaluaPelicula (8.5);
+        System.out.println("Total de evaluaciones: " + madMax.getTotalEvaluaciones());
+        System.out.println("Promedio de evaluaciones: " + madMax.promedioEvaluaciones());
         System.out.println("---------------------------------------");
 
-        Pelicula pelicula2 = new Pelicula();
 
-        pelicula2.setNombre("DEADPOOL");
-        pelicula2.setFechaEstreno(1956);
-        pelicula2.setDuracionEnMinutos(60);
-        pelicula2.setIncluidoEnElPlan(false);
-
-        pelicula2.muestraFichaTecnica();
-
-        pelicula2.evaluaPelicula (10);
-        pelicula2.evaluaPelicula(10);
-        pelicula2.evaluaPelicula (10);
-        pelicula2.evaluaPelicula(10);
-        pelicula2.evaluaPelicula (10);
-        pelicula2.evaluaPelicula(10);
-
-        System.out.println("Total de evaluaciones: " + pelicula2.getTotalEvaluaciones());
-        System.out.println("Promedio de evaluaciones: " + pelicula2.promedioEvaluaciones());
-
+        Serie breakingBad = new Serie();
         System.out.println("---------------------------------------");
 
-        Pelicula pelicula3 = new Pelicula();
-        pelicula3.setNombre("AVENGERS");
-        pelicula3.setFechaEstreno(2022);
-        pelicula3.setDuracionEnMinutos(120);
-        pelicula3.setIncluidoEnElPlan(true);
+        breakingBad.setNombre("Breaking Bad");
+        breakingBad.setFechaEstreno(2008);
+        breakingBad.setTemporadas(5);
+        breakingBad.setEspidios(62);
+        breakingBad.setMinutosPorEpisodio(50);
 
-       pelicula3.muestraFichaTecnica();
+        breakingBad.muestraFichaTecnica();
 
-        pelicula3.evaluaPelicula (7.5);
-        pelicula3.evaluaPelicula(5.0);
-        pelicula3.evaluaPelicula(8.0);
-        pelicula3.evaluaPelicula(9.0);
-        System.out.println("Total de evaluaciones: " + pelicula3.getTotalEvaluaciones());
-        System.out.println("Promedio de evaluaciones: " + pelicula3.promedioEvaluaciones());
-
+        System.out.println("Temporadas: " + breakingBad.getTemporadas());
+        System.out.println("Episodios: " + breakingBad.getEspidios());
+        System.out.println("Minutos por episodio: " + breakingBad.getMinutosPorEpisodio());
+        breakingBad.evaluaPelicula(9.5);
+        breakingBad.evaluaPelicula(9.0);
+        breakingBad.evaluaPelicula(9.5);
+        System.out.println("Total de evaluaciones: " + breakingBad.getTotalEvaluaciones());
+        System.out.println("Promedio de evaluaciones: " + breakingBad.promedioEvaluaciones());
         System.out.println("---------------------------------------");
+
+
 
     }
 }
