@@ -4,10 +4,9 @@ public class Titulo {
 
     private String nombre;
     private int fechaEstreno;
-    private int duracionEnMinutos;
     private boolean incluidoEnElPlan;
     private double evaluacion;
-    private int totalEvaluaciones;
+    private int cantidadEvaluaciones;
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -15,10 +14,6 @@ public class Titulo {
 
     public void setFechaEstreno(int fechaEstreno) {
         this.fechaEstreno = fechaEstreno;
-    }
-
-    public void setDuracionEnMinutos(int duracionEnMinutos) {
-        this.duracionEnMinutos = duracionEnMinutos;
     }
 
     public void setIncluidoEnElPlan(boolean incluidoEnElPlan) {
@@ -29,27 +24,26 @@ public class Titulo {
         return fechaEstreno;
     }
 
-    public int getTotalEvaluaciones() {
-        return totalEvaluaciones;
+    public int getcantidadEvaluaciones() {
+        return cantidadEvaluaciones;
     }
 
     public void muestraFichaTecnica() {
         System.out.println("Nombre: " + nombre);
         System.out.println("Fecha de Estreno: " + getFechaEstreno());
-        System.out.println("Duración en minutos: " + duracionEnMinutos);
         System.out.println("Incluido en el plan: " + incluidoEnElPlan);
     }
 
     public void evaluaPelicula(double nota) {
         evaluacion = evaluacion + nota;
-        totalEvaluaciones++;
+        cantidadEvaluaciones++;
     }
 
-    public double promedioEvaluaciones() {
-        if (totalEvaluaciones == 0) {
+    public double cantidadEvaluaciones() {
+        if (cantidadEvaluaciones == 0) {
             return 0;
         }
-        return evaluacion / totalEvaluaciones;
+        return evaluacion / cantidadEvaluaciones;
     }
 
 }

@@ -5,6 +5,7 @@ public class Serie extends Titulo {
     int temporadas;
     int espidios;
     int minutosPorEpisodio;
+    int duraciontotal;
 
     public int getTemporadas() {
         return temporadas;
@@ -18,8 +19,8 @@ public class Serie extends Titulo {
         return espidios;
     }
 
-    public void setEspidios(int espidios) {
-        this.espidios = espidios;
+    public void setEspisodios(int espisodios) {
+        this.espidios = espisodios;
     }
 
     public int getMinutosPorEpisodio() {
@@ -28,5 +29,13 @@ public class Serie extends Titulo {
 
     public void setMinutosPorEpisodio(int minutosPorEpisodio) {
         this.minutosPorEpisodio = minutosPorEpisodio;
+    }
+
+    public int getDuraciontotal() {
+        return duraciontotal;
+    }
+
+    public void setDuraciontotal(int duraciontotal) {
+        this.duraciontotal = duraciontotal;
     }
 }

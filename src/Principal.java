@@ -18,8 +18,10 @@ public class Principal {
         madMax.evaluaPelicula (8.5);
         madMax.evaluaPelicula(9.0);
         madMax.evaluaPelicula (8.5);
-        System.out.println("Total de evaluaciones: " + madMax.getTotalEvaluaciones());
-        System.out.println("Promedio de evaluaciones: " + madMax.promedioEvaluaciones());
+
+        System.out.println("Total de evaluaciones: " + madMax.getcantidadEvaluaciones());
+        System.out.println("Promedio de evaluaciones: " + madMax.cantidadEvaluaciones());
+        System.out.println("Duración en minutos: " + madMax.getDuracionEnMinutos());
         System.out.println("---------------------------------------");
 
 
@@ -29,22 +31,23 @@ public class Principal {
         breakingBad.setNombre("Breaking Bad");
         breakingBad.setFechaEstreno(2008);
         breakingBad.setTemporadas(5);
-        breakingBad.setEspidios(62);
+        breakingBad.setEspisodios(62);
         breakingBad.setMinutosPorEpisodio(50);
+        breakingBad.setDuraciontotal(breakingBad.getMinutosPorEpisodio() * breakingBad.getEspidios() * breakingBad.getTemporadas());
+
 
         breakingBad.muestraFichaTecnica();
 
         System.out.println("Temporadas: " + breakingBad.getTemporadas());
         System.out.println("Episodios: " + breakingBad.getEspidios());
         System.out.println("Minutos por episodio: " + breakingBad.getMinutosPorEpisodio());
+        System.out.println("Duración total: " + breakingBad.getDuraciontotal() + " minutos");
         breakingBad.evaluaPelicula(9.5);
         breakingBad.evaluaPelicula(9.0);
         breakingBad.evaluaPelicula(9.5);
-        System.out.println("Total de evaluaciones: " + breakingBad.getTotalEvaluaciones());
-        System.out.println("Promedio de evaluaciones: " + breakingBad.promedioEvaluaciones());
+        System.out.println("Total de evaluaciones: " + breakingBad.getcantidadEvaluaciones());
+        System.out.println("Promedio de evaluaciones: " + breakingBad.cantidadEvaluaciones());
         System.out.println("---------------------------------------");
-
-
-
+        
     }
 }
