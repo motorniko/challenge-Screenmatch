@@ -1,53 +1,46 @@
+import com.aluracursos.screenmacth.calculos.CalculadoraDeTiempo;
 import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Serie;
 
 public class Principal {
     public static void main(String[] args) {
+        Pelicula miPelicula = new Pelicula();
+        miPelicula.setNombre("Encanto");
+        miPelicula.setFechaDeLanzamiento(2021);
+        miPelicula.setDuracionEnMinutos(120);
+        miPelicula.setIncluidoEnElPlan(true);
+
+        miPelicula.muestraFichaTecnica();
+        miPelicula.evalua(10);
+        miPelicula.evalua(10);
+        miPelicula.evalua(7.8);
+        System.out.println(miPelicula.getTotalDelasEvaluaciones());
+        System.out.println(miPelicula.calculaMedia());
+
+        Serie casaDragon = new Serie();
+        casaDragon.setNombre("La casa del dragón");
+        casaDragon.setFechaDeLanzamiento(2022);
+        casaDragon.setTemporadas(1);
+        casaDragon.setMinutosPorEpisodio(50);
+        casaDragon.setEpisodiosPorTemporada(10);
+        casaDragon.muestraFichaTecnica();
+        System.out.println(casaDragon.getDuracionEnMinutos());
+
+        Pelicula otraPelicula = new Pelicula();
+        otraPelicula.setNombre("Matrix");
+        otraPelicula.setFechaDeLanzamiento(1998);
+        otraPelicula.setDuracionEnMinutos(180);
+
+        CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
+        calculadora.incluye(miPelicula);
+        calculadora.incluye(casaDragon);
+        calculadora.incluye(otraPelicula);
+        System.out.println("Tiempo necesario para ver tus títulos favoritos estas vacaciones "
+                + calculadora.getTiempoTotal() + " minutos");
 
 
-        Pelicula madMax = new Pelicula();
-        System.out.println("---------------------------------------");
-
-        madMax.setNombre("MAD-MAX");
-        madMax.setFechaEstreno(2025);
-        madMax.setDuracionEnMinutos(120);
-        madMax.setIncluidoEnElPlan(true);
-
-        madMax.muestraFichaTecnica();
-
-        madMax.evaluaPelicula (8.5);
-        madMax.evaluaPelicula(9.0);
-        madMax.evaluaPelicula (8.5);
-
-        System.out.println("Total de evaluaciones: " + madMax.getcantidadEvaluaciones());
-        System.out.println("Promedio de evaluaciones: " + madMax.cantidadEvaluaciones());
-        System.out.println("Duración en minutos: " + madMax.getDuracionEnMinutos());
-        System.out.println("---------------------------------------");
 
 
-        Serie breakingBad = new Serie();
-        System.out.println("---------------------------------------");
 
-        breakingBad.setNombre("Breaking Bad");
-        breakingBad.setFechaEstreno(2008);
-        breakingBad.setTemporadas(5);
-        breakingBad.setEspisodios(62);
-        breakingBad.setMinutosPorEpisodio(50);
-        breakingBad.setDuraciontotal(breakingBad.getMinutosPorEpisodio() * breakingBad.getEspidios() * breakingBad.getTemporadas());
-
-
-        breakingBad.muestraFichaTecnica();
-
-        System.out.println("Temporadas: " + breakingBad.getTemporadas());
-        System.out.println("Episodios: " + breakingBad.getEspidios());
-        System.out.println("Minutos por episodio: " + breakingBad.getMinutosPorEpisodio());
-        System.out.println("Duración total: " + breakingBad.getDuraciontotal() + " minutos");
-        breakingBad.evaluaPelicula(9.5);
-        breakingBad.evaluaPelicula(9.0);
-        breakingBad.evaluaPelicula(9.5);
-        System.out.println("Total de evaluaciones: " + breakingBad.getcantidadEvaluaciones());
-        System.out.println("Promedio de evaluaciones: " + breakingBad.cantidadEvaluaciones());
-        System.out.println("---------------------------------------");
-        
     }
 }

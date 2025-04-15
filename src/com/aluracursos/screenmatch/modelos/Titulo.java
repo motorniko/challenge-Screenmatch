@@ -1,49 +1,61 @@
 package com.aluracursos.screenmatch.modelos;
 
 public class Titulo {
-
     private String nombre;
-    private int fechaEstreno;
+    private int fechaDeLanzamiento;
+    private int duracionEnMinutos;
     private boolean incluidoEnElPlan;
-    private double evaluacion;
-    private int cantidadEvaluaciones;
+    private double sumaDeLasEvaluaciones;
+    private int totalDelasEvaluaciones;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getFechaDeLanzamiento() {
+        return fechaDeLanzamiento;
+    }
+
+    public int getDuracionEnMinutos() {
+        return duracionEnMinutos;
+    }
+
+    public boolean isIncluidoEnElPlan() {
+        return incluidoEnElPlan;
+    }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setFechaEstreno(int fechaEstreno) {
-        this.fechaEstreno = fechaEstreno;
+    public void setFechaDeLanzamiento(int fechaDeLanzamiento) {
+        this.fechaDeLanzamiento = fechaDeLanzamiento;
+    }
+
+    public void setDuracionEnMinutos(int duracionEnMinutos) {
+        this.duracionEnMinutos = duracionEnMinutos;
     }
 
     public void setIncluidoEnElPlan(boolean incluidoEnElPlan) {
         this.incluidoEnElPlan = incluidoEnElPlan;
     }
 
-    public int getFechaEstreno() {
-        return fechaEstreno;
+    public int getTotalDelasEvaluaciones(){
+        return totalDelasEvaluaciones;
     }
 
-    public int getcantidadEvaluaciones() {
-        return cantidadEvaluaciones;
+    public void muestraFichaTecnica(){
+        System.out.println("El nombre de la película es: " + nombre);
+        System.out.println("Su fecha de lanzamiento es: " + fechaDeLanzamiento);
+        System.out.println("Duración en minutos: "+ getDuracionEnMinutos());
     }
 
-    public void muestraFichaTecnica() {
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Fecha de Estreno: " + getFechaEstreno());
-        System.out.println("Incluido en el plan: " + incluidoEnElPlan);
+    public void evalua(double nota){
+        sumaDeLasEvaluaciones += nota;
+        totalDelasEvaluaciones++;
     }
 
-    public void evaluaPelicula(double nota) {
-        evaluacion = evaluacion + nota;
-        cantidadEvaluaciones++;
+    public double calculaMedia(){
+        return sumaDeLasEvaluaciones / totalDelasEvaluaciones;
     }
-
-    public double cantidadEvaluaciones() {
-        if (cantidadEvaluaciones == 0) {
-            return 0;
-        }
-        return evaluacion / cantidadEvaluaciones;
-    }
-
 }

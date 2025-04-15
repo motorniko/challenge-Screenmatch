@@ -1,24 +1,13 @@
 package com.aluracursos.screenmatch.modelos;
 
 public class Pelicula extends Titulo {
-
-    private int duracionEnMinutos;
-
-    public int getDuracionEnMinutos() {
-        return duracionEnMinutos;
-    }
-
-    public void setDuracionEnMinutos(int duracionEnMinutos) {
-        this.duracionEnMinutos = duracionEnMinutos;
-    }
-
-    private String Director;
+    private String director;
 
     public String getDirector() {
-        return Director;
+        return director;
     }
 
     public void setDirector(String director) {
-        Director = director;
+        this.director = director;
     }
 }
